@@ -1,0 +1,7 @@
+@import '../_font/_font_montserrat/_font_montserrat.css';
+.btn {
+    border-radius: 22px;
+    text-align: center;
+    font-family: 'montserrat';
+    padding: 10px 20px;
+}

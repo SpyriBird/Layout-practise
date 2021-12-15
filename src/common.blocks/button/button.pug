@@ -1,1 +1,12 @@
-mixin button (option)
+style
+    include button.css
+    include button_theme/button_theme_blue.css
+    include button_theme/button_theme_white.css
+
+mixin btn(option)
+    -
+      var btnClasses = "btn"
+      btnClasses += option.isWhite ? " btn_theme_white" : "" 
+      btnClasses += option.isBlue ? " btn_theme_blue" : ""   
+    div.btn-container
+        div(class=btnClasses)= option.btnText
