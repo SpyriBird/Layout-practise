@@ -4,4 +4,6 @@ mixin btn(option)
       btnClasses += option.isWhite ? " btn_theme_white" : "" 
       btnClasses += option.isBlue ? " btn_theme_blue" : ""   
     div.btn-container
-        div(class=btnClasses)= option.btnText
+        if option.isWhite
+        .btn-border-wrap
+            div(class=btnClasses)= option.btnText
