@@ -12,7 +12,7 @@ module.exports = {
     },
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
     },
     optimization: {
         splitChunks: {
@@ -47,15 +47,12 @@ module.exports = {
                 }, 'css-loader']
             },
             {
-                test: /\.(png|jpg|svg|gif)$/,
+                test: /\.(png|jpg|gif)$/,
                 use: ['file-loader']
             },
             {
-                test: /\.(woff|ttf)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]'
-                }
+                test: /\.(woff|ttf|svg)$/,
+                use: ['url-loader']
             },
             {
                 test: /\.pug$/,

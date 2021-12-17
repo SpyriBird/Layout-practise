@@ -1,7 +1,14 @@
 include ../button/button.pug
+include ../link/link.pug
 
 .header
-  .header__reg-btn 
-    +btn({btnText: "ВОЙТИ", isWhite: true})
-    +btn({btnText: "ЗАРЕГИСТИРОВАТЬСЯ", isBlue: true})
+  .header-logo
+    include ../logo/logo.pug
+  +link({linkText: "О нас", href: '#', isBlack: true})
+  +link({linkText: "Услуги", href: '#', usual: true, hasArrow: true})
+  +link({linkText: "Вакансии", href: '#', usual: true})
+  +link({linkText: "Новости", href: '#', usual: true})
+  +link({linkText: "Соглашения", href: '#', usual: true, hasArrow: true})
+  +btn({btnText: "ВОЙТИ", isWhite: true})
+  +btn({btnText: "ЗАРЕГИСТИРОВАТЬСЯ", isBlue: true})
     
