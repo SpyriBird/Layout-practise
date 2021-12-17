@@ -1,2 +1,2 @@
-import './style.css'
+import './style.sass'
 import * as $ from 'jquery'
