@@ -20,12 +20,12 @@ module.exports = {
         }
     },
     devServer: {
-        port: 'auto',
         open: true,
+        port: 4200,
     },
     plugins: [
         new HTMLWebpackPlugin({
-            filename: 'output.html',
+            filename: 'index.html',
             minify: false,
             template: 'index.pug'
         }),
@@ -52,7 +52,7 @@ module.exports = {
             },
             {
                 test: /\.(woff|ttf|svg)$/,
-                use: ['url-loader']
+                use: ['file-loader']
             },
             {
                 test: /\.pug$/,
