@@ -1,0 +1,31 @@
+include ../link/link.pug
+
+.footer
+    .footer-grid
+        .footer-logo-column
+            include ../logo/logo.pug
+            p.footer-under-logo-paragraph.text_style_usual Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        .footer-nav-column 
+            +link({class: 'footer-link', linkText: "НАВИГАЦИЯ", href: '#', isBlack: true})
+            +link({class: 'footer-link', linkText: "О нас", href: '#', usual: true})
+            +link({class: 'footer-link', linkText: "Новости", href: '#', usual: true})
+            +link({class: 'footer-link', linkText: "Служба поддержки", href: '#', usual: true})
+            +link({class: 'footer-link', linkText: "Услуги", href: '#', usual: true})
+        .footer-about-us-column 
+            +link({class: 'footer-link', linkText: "О НАС", href: '#', isBlack: true})
+            +link({class: 'footer-link', linkText: "О сервисе", href: '#', usual: true})
+            +link({class: 'footer-link', linkText: "Наша команда", href: '#', usual: true})
+            +link({class: 'footer-link', linkText: "Вакансии", href: '#', usual: true})
+            +link({class: 'footer-link', linkText: "Инвесторы", href: '#', usual: true})
+        .footer-support-column 
+            +link({class: 'footer-link', linkText: "СЛУЖБА ПОДДЕРЖКИ", href: '#', isBlack: true})
+            +link({class: 'footer-link', linkText: "Соглашения", href: '#', usual: true})
+            +link({class: 'footer-link', linkText: "Сообщества", href: '#', usual: true})
+            +link({class: 'footer-link', linkText: "Связь с нами", href: '#', usual: true})
+        .footer-subscribe-column 
+            +link({class: 'footer-link', linkText: "ПОДПИСКА", href: '#', isBlack: true})
+            p.footer-under-subscribe-paragraph.text_style_usual Получайте специальные предложения и новости сервиса
+            .footer-subscribe-form
+    hr.footer-hr
+    p.copyright.text_style_usual Copyright © 2018 Toxin отель. Все права защищены.
+
