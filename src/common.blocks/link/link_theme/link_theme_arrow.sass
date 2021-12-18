@@ -1,11 +1,18 @@
+$arrowWidth: .1em
+$arrowSize: .4em
+    
 .link_theme_arrow
     display: inline-block
-    margin-right: 10px
 .link__arrow
-    width: 10px
-    height: 10px
-    border-top: 2px solid $grey2
-    border-right: 2px solid $grey2
-    margin-right: 10px
+    width: $arrowSize
+    height: $arrowSize
+    border-top: $arrowWidth solid $grey2
+    border-right: $arrowWidth solid $grey2
+    margin-right: $arrowSize
     transform: rotate(135deg)
     display: inline-block
+.arrow-container
+    position: relative
+    bottom: .16em
+    display: inline-block
+    margin-left: .5em

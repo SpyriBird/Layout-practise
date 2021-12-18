@@ -6,5 +6,6 @@ mixin link(option)
         linkClasses += option.usual ? " link_theme_usual" : ""
     div(class=option.class)
         a(class=linkClasses href=option.href)= option.linkText
-        if option.hasArrow 
-            .link__arrow
+            if option.hasArrow 
+                .arrow-container
+                    .link__arrow
