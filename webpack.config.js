@@ -11,7 +11,7 @@ module.exports = {
         main: './index.js'
     },
     output: {
-        filename: '[name].[contenthash].js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
     optimization: {
@@ -52,7 +52,7 @@ module.exports = {
             },
             {
                 test: /\.(woff|ttf|svg)$/,
-                use: ['file-loader']
+                use: ['url-loader']
             },
             {
                 test: /\.pug$/,

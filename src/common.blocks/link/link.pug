@@ -1,10 +1,10 @@
 mixin link(option)
     -
-        var linkClasses = "header__link"
-        linkClasses += option.hasArrow ? " header__link_theme_arrow" : "" 
-        linkClasses += option.isBlack ? " header__link_theme_black" : ""
-        linkClasses += option.usual ? " header__link_theme_usual" : ""
-    .link-container 
+        var linkClasses = "link"
+        linkClasses += option.hasArrow ? " link_theme_arrow" : "" 
+        linkClasses += option.isBlack ? " link_theme_black" : ""
+        linkClasses += option.usual ? " link_theme_usual" : ""
+    div(class=option.class)
         a(class=linkClasses href=option.href)= option.linkText
         if option.hasArrow 
             .link__arrow
