@@ -1,15 +1,16 @@
 include ../button/button.pug
 include ../link/link.pug
 
-.header
-  .header-logo
-    include ../logo/logo.pug
-  .header-right-group
-    +link({class: 'header-link', linkText: "О нас", href: '#', usual: true})
-    +link({class: 'header-link', linkText: "Услуги", href: '#', usual: true, hasArrow: true})
-    +link({class: 'header-link', linkText: "Вакансии", href: '#', usual: true})
-    +link({class: 'header-link', linkText: "Новости", href: '#', usual: true})
-    +link({class: 'header-link',linkText: "Соглашения", href: '#', usual: true, hasArrow: true})
-    +btn({class: 'header-btn', btnText: "ВОЙТИ", isWhite: true})
-    +btn({class: 'header-btn', btnText: "ЗАРЕГИСТPИРОВАТЬСЯ", isBlue: true})
-      
+header.header
+    .header-logo
+        include ../logo/logo.pug
+    .header-right-group
+        nav.header-nav
+            +link({class: 'header-link', linkText: "О нас", href: '/mock-address/change-me', usual: true})
+            +link({class: 'header-link', linkText: "Услуги", href: '#', usual: true, hasArrow: true})
+            +link({class: 'header-link', linkText: "Вакансии", href: '#', usual: true})
+            +link({class: 'header-link', linkText: "Новости", href: '#', usual: true})
+            +link({class: 'header-link',linkText: "Соглашения", href: '#', usual: true, hasArrow: true})
+        form.header-form
+            +btn({class: 'header-btn', btnText: "войти", isWhite: true})
+            +btn({class: 'header-btn', btnText: "зарегистрироваться", isBlue: true})

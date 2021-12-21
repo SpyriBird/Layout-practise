@@ -4,14 +4,34 @@
 @import common.blocks/text_style/text_style_small-bold
 @import common.blocks/_font/_font_montserrat
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
-@import common.blocks/button/button
-@import common.blocks/link/link
-@import common.blocks/logo/logo
-@import common.blocks/header/header
-@import common.blocks/footer/footer
+
+html
+    background-color: $almost-white
+    font-size: 100%
+    color: $grey2
 
 .main
     background-image: url('image 3.png')
     height: 830px
     margin: 0px
+    clear: both
 
+.body
+    height: 100%
+
+.body-content-wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+.body-content-wrapper
+    flex: 1 0 auto
+
+.footer 
+    flex: 0 0 auto
+
+@import common.blocks/button/button
+@import common.blocks/link/link
+@import common.blocks/logo/logo
+@import common.blocks/header/header
+@import common.blocks/footer/footer
