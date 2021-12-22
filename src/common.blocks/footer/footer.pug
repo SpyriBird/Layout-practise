@@ -6,26 +6,34 @@ footer.footer
             include ../logo/logo.pug
             p.footer-under-logo-paragraph.text_style_usual Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
         .footer-nav-column 
-            p.footer-column-header.text_style_small-bold НАВИГАЦИЯ
-            +link({class: 'footer-link', linkText: "О нас", href: '#', usual: true})
-            +link({class: 'footer-link', linkText: "Новости", href: '#', usual: true})
-            +link({class: 'footer-link', linkText: "Служба поддержки", href: '#', usual: true})
-            +link({class: 'footer-link', linkText: "Услуги", href: '#', usual: true})
+            p.footer-column-header.text_style_small-bold навигация
+            +link({class: 'footer-link', linkText: "О нас" , usual: true})
+            +link({class: 'footer-link', linkText: "Новости" , usual: true})
+            +link({class: 'footer-link', linkText: "Служба поддержки" , usual: true})
+            +link({class: 'footer-link', linkText: "Услуги" , usual: true})
         .footer-about-us-column 
-            p.footer-column-header.text_style_small-bold О НАС
-            +link({class: 'footer-link', linkText: "О сервисе", href: '#', usual: true})
-            +link({class: 'footer-link', linkText: "Наша команда", href: '#', usual: true})
-            +link({class: 'footer-link', linkText: "Вакансии", href: '#', usual: true})
-            +link({class: 'footer-link', linkText: "Инвесторы", href: '#', usual: true})
+            p.footer-column-header.text_style_small-bold о нас
+            +link({class: 'footer-link', linkText: "О сервисе" , usual: true})
+            +link({class: 'footer-link', linkText: "Наша команда" , usual: true})
+            +link({class: 'footer-link', linkText: "Вакансии" , usual: true})
+            +link({class: 'footer-link', linkText: "Инвесторы" , usual: true})
         .footer-support-column 
-           p.footer-column-header.text_style_small-bold СЛУЖБА ПОДДЕРЖКИ
-            +link({class: 'footer-link', linkText: "Соглашения", href: '#', usual: true})
-            +link({class: 'footer-link', linkText: "Сообщества", href: '#', usual: true})
-            +link({class: 'footer-link', linkText: "Связь с нами", href: '#', usual: true})
+           p.footer-column-header.text_style_small-bold служба поддержки
+            +link({class: 'footer-link', linkText: "Соглашения" , usual: true})
+            +link({class: 'footer-link', linkText: "Сообщества" , usual: true})
+            +link({class: 'footer-link', linkText: "Связь с нами" , usual: true})
         .footer-subscribe-column 
-            p.footer-column-header.text_style_small-bold ПОДПИСКА
+            p.footer-column-header.text_style_small-bold подписка
             p.footer-under-subscribe-paragraph.text_style_usual Получайте специальные предложения и новости сервиса
-            .footer-subscribe-form
+            form.footer-subscribe-form
+                input(type="email", name="", placeholder="Email", class="text_style_pale", required, value="")
+                input(type="submit", value="").footer-submit
     hr.footer-hr
     p.copyright.text_style_usual Copyright © 2018 Toxin отель. Все права защищены.
+        a(href="/mock-address/change-me").footer-social-network-link 
+            img(src="../src/common.blocks/footer/link-images/footer-twitter-link.png", alt="twitter link")
+        a(href="/mock-address/change-me").footer-social-network-link 
+            img(src="../src/common.blocks/footer/link-images/footer-facebook-link.png", alt="facebook link")
+        a(href="/mock-address/change-me").footer-social-network-link
+            img(src="../src/common.blocks/footer/link-images/footer-instagram-link.png", alt="instagram link")
 

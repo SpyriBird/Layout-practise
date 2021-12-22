@@ -1,9 +1,10 @@
 @import ~normalize.css
-@import colors
+@import common.blocks/font/_font_montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
+@import sass-variables
 @import common.blocks/text_style/text_style_usual
 @import common.blocks/text_style/text_style_small-bold
-@import common.blocks/_font/_font_montserrat
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
+
 
 html
     background-color: $almost-white
@@ -13,8 +14,9 @@ html
 .main
     background-image: url('image 3.png')
     height: 830px
-    margin: 0px
-    clear: both
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
 
 .body
     height: 100%
@@ -29,7 +31,7 @@ html
 
 .footer 
     flex: 0 0 auto
-
+@import common.blocks/input/input
 @import common.blocks/button/button
 @import common.blocks/link/link
 @import common.blocks/logo/logo

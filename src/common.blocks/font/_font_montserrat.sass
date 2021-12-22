@@ -1,14 +1,15 @@
-$mb: 'common.blocks/_font/montserrat-bold'
-$mr: 'common.blocks/_font/montserrat-regular'
+$mb: 'common.blocks/font/montserrat-bold'
+$mr: 'common.blocks/font/montserrat-regular'
     
 @font-face 
-    font-family: 'Montserrat700', sans-serif
+    font-family: 'Montserrat', sans-serif
     // src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'), 
-    src: url('#{$mb}.ttf') format('truetype'), 
-    src: url($mb + ".svg") format('svg'), 
-    src: url($mb + ".woff") format('woff')
+    src: url('#{$mb}.ttf') format('truetype'),  url($mb + ".svg") format('svg'),  url($mb + ".woff") format('woff')
     font-weight: 700
+    font-style: normal
+
 @font-face 
-    font-family: 'Montserrat400', sans-serif
+    font-family: 'Montserrat', sans-serif
     src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap'), url($mr + '.ttf') format('truetype'), url($mr + '.woff') format('woff'), url($mr + ".svg") format('svg'),
     font-weight: 400
+    font-style: normal

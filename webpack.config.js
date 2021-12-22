@@ -32,7 +32,7 @@ module.exports = {
         new HtmlWebpackPugPlugin(),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
+            filename: '[name].css'
         })
     ],
     module: {
@@ -46,14 +46,14 @@ module.exports = {
                     // }
                 }, 'css-loader']
             },
-            {
-                test: /\.(png|jpg|gif)$/,
-                use: ['url-loader']
-            },
-            {
-                test: /\.(woff|ttf|svg)$/,
-                use: ['url-loader']
-            },
+            // {
+            //     test: /\.(png|jpg|gif)$/,
+            //     use: ['url-loader']
+            // },
+            // {
+            //     test: /\.(woff|ttf|svg)$/,
+            //     use: ['file-loader']
+            // },
             {
                 test: /\.pug$/,
                 loader: 'pug-loader'

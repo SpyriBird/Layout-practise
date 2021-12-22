@@ -1,6 +1,7 @@
 mixin link(option)
     -
         var linkClasses = "link"
+        option.href += option.href ? "" : "/mock-address/change-me"
         linkClasses += option.hasArrow ? " link_theme_arrow" : "" 
         linkClasses += option.isBlack ? " link_theme_black" : ""
         linkClasses += option.usual ? " link_theme_usual" : ""

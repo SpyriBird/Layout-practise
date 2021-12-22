@@ -6,11 +6,11 @@ header.header
         include ../logo/logo.pug
     .header-right-group
         nav.header-nav
-            +link({class: 'header-link', linkText: "О нас", href: '/mock-address/change-me', usual: true})
-            +link({class: 'header-link', linkText: "Услуги", href: '#', usual: true, hasArrow: true})
-            +link({class: 'header-link', linkText: "Вакансии", href: '#', usual: true})
-            +link({class: 'header-link', linkText: "Новости", href: '#', usual: true})
-            +link({class: 'header-link',linkText: "Соглашения", href: '#', usual: true, hasArrow: true})
+            +link({class: 'header-link', linkText: "О нас", usual: true})
+            +link({class: 'header-link', linkText: "Услуги", usual: true, hasArrow: true})
+            +link({class: 'header-link', linkText: "Вакансии", usual: true})
+            +link({class: 'header-link', linkText: "Новости", usual: true})
+            +link({class: 'header-link',linkText: "Соглашения" , usual: true, hasArrow: true})
         form.header-form
-            +btn({class: 'header-btn', btnText: "войти", isWhite: true})
-            +btn({class: 'header-btn', btnText: "зарегистрироваться", isBlue: true})
+            +button({class: 'header-btn', btnText: "войти", isWhite: true})
+            +button({class: 'header-btn', btnText: "зарегистрироваться", isBlue: true})
