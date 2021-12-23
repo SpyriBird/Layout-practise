@@ -26,14 +26,16 @@ footer.footer
             p.footer-column-header.text_style_small-bold подписка
             p.footer-under-subscribe-paragraph.text_style_usual Получайте специальные предложения и новости сервиса
             form.footer-subscribe-form
-                input(type="email", name="", placeholder="Email", class="text_style_pale", required, value="")
+                input(type="email", name="", placeholder="Email", required, value="").footer-input-email.text_style_usual-black
                 input(type="submit", value="").footer-submit
     hr.footer-hr
-    p.copyright.text_style_usual Copyright © 2018 Toxin отель. Все права защищены.
-        a(href="/mock-address/change-me").footer-social-network-link 
-            img(src="../src/common.blocks/footer/link-images/footer-twitter-link.png", alt="twitter link")
-        a(href="/mock-address/change-me").footer-social-network-link 
-            img(src="../src/common.blocks/footer/link-images/footer-facebook-link.png", alt="facebook link")
-        a(href="/mock-address/change-me").footer-social-network-link
-            img(src="../src/common.blocks/footer/link-images/footer-instagram-link.png", alt="instagram link")
+    .footer-copyright
+        p.copyright.text_style_usual Copyright © 2018 Toxin отель. Все права защищены.
+        .social-network-group
+            a(href="/mock-address/change-me").link.social-network__twitter
+                img(src="../src/common.blocks/footer/link-images/footer-twitter-link.png", alt="twitter link")
+            a(href="/mock-address/change-me").link.social-network__facebook
+                img(src="../src/common.blocks/footer/link-images/footer-facebook-link.png", alt="facebook link")
+            a(href="/mock-address/change-me").link.social-network__instagram
+                img(src="../src/common.blocks/footer/link-images/footer-instagram-link.png", alt="instagram link")
 

@@ -1,5 +1,4 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -13,6 +12,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true
     },
     optimization: {
         splitChunks: {
@@ -30,30 +30,15 @@ module.exports = {
             template: 'index.pug'
         }),
         new HtmlWebpackPugPlugin(),
-        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css'
         })
     ],
     module: {
         rules: [{
-                test: /\.css$/,
-                use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    // options: {
-                    //     hmr: true,
-                    //     reloadAll: true
-                    // }
-                }, 'css-loader']
+                test: /\.(png|svg|jpg|jpeg|gif|ttf|woff)$/i,
+                type: 'asset/resource',
             },
-            // {
-            //     test: /\.(png|jpg|gif)$/,
-            //     use: ['url-loader']
-            // },
-            // {
-            //     test: /\.(woff|ttf|svg)$/,
-            //     use: ['file-loader']
-            // },
             {
                 test: /\.pug$/,
                 loader: 'pug-loader'
