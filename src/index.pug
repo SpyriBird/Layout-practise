@@ -6,6 +6,8 @@ html(lang="en")
         meta(name="keywords" content="some keywords")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        //link(rel="icon" type="image/svg+xml" href=require('./favicon.svg'))
+        link(rel="icon" type="image/png" href=require('./favicon.png'))
         link(rel="stylesheet", href="./style.sass")
         title Toxin
         
@@ -13,7 +15,5 @@ html(lang="en")
         .body-content-wrapper
             .everything-except-footer
                 include common.blocks/header/header.pug
-                .main
-                    p.text_style_usual Лучшие номера для вашей работы, отдыха и просто вдохновения
-                //img(src="../src/image 3.png", alt="background")   
+                include common.blocks/landing-page-main/main.pug
             include common.blocks/footer/footer.pug

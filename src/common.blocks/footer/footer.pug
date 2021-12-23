@@ -29,13 +29,7 @@ footer.footer
                 input(type="email", name="", placeholder="Email", required, value="").footer-input-email.text_style_usual-black
                 input(type="submit", value="").footer-submit
     hr.footer-hr
-    .footer-copyright
+    .footer__copyright-container
         p.copyright.text_style_usual Copyright © 2018 Toxin отель. Все права защищены.
-        .social-network-group
-            a(href="/mock-address/change-me").link.social-network__twitter
-                img(src="../src/common.blocks/footer/link-images/footer-twitter-link.png", alt="twitter link")
-            a(href="/mock-address/change-me").link.social-network__facebook
-                img(src="../src/common.blocks/footer/link-images/footer-facebook-link.png", alt="facebook link")
-            a(href="/mock-address/change-me").link.social-network__instagram
-                img(src="../src/common.blocks/footer/link-images/footer-instagram-link.png", alt="instagram link")
+        include ../social-network-links/social-network-links.pug
 

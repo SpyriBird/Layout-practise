@@ -1,5 +1,5 @@
 @import ~normalize.css
-@import common.blocks/font/_font_montserrat
+@import common.blocks/font/font_montserrat
 @import sass-variables
 @import common.blocks/text_style/text_style_usual
 @import common.blocks/text_style/text_style_small-bold
@@ -12,13 +12,6 @@ html
     font-size: 100%
     color: $grey2
 
-.main
-    background: url('landing-page-background-1.jpg') no-repeat
-    height: 830px
-    display: flex
-    justify-content: flex-end
-    align-items: flex-end
-
 .body
     height: 100%
 
@@ -27,8 +20,9 @@ html
     flex-direction: column
     min-height: 100%
 
-.body-content-wrapper
+.everything-except-footer
     flex: 1 0 auto
+    background: url('landing-page-background-1.jpg') no-repeat
 
 .footer 
     flex: 0 0 auto
@@ -38,3 +32,5 @@ html
 @import common.blocks/logo/logo
 @import common.blocks/header/header
 @import common.blocks/footer/footer
+@import common.blocks/landing-page-main/main
+@import common.blocks/social-network-links/social-network-links
