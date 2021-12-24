@@ -1,2 +1,14 @@
+include ../input/input.pug
 .landing-page-search-window
     h1.landing-page-search-window__header.text_style_large-bold Найдём номера под ваши пожелания
+    form.landing-page-search-form(action="") 
+        .arrival-and-departure-dates
+            .arrival
+                h2.arrival-heading.text_style_small-bold прибытие
+                +input({type: 'date'})
+            .departure
+                h2.departure-heading.text_style_small-bold выезд
+                +input({type: 'date'})
+        .guests-number
+            h2.guest-number-heading гости
+            +input({type: ''})
