@@ -1,3 +1,15 @@
 mixin input(option)
-    if option.type === 'email'
+    if option.type === 'email-and-submit'
         include ./input_type_email-and-submit/input_type_email-and-submit.pug
+    else if option.type === 'date'
+        input(type="date").input_type_date
+    else if option.type === 'submit'
+       .input-submit-container 
+            input(type="submit" value=option.text).input-submit
+            .input-submit__arrow
+    else if option.type === 'email'
+        .input-email-container
+            input(type="email", name="", placeholder="Email", required, value="").text_style_usual-black.input-email
+    else if option.type === 'password'
+        .input-password-container
+            input(type="password", name="", placeholder="Password", required, value="").text_style_usual-black.input-password
