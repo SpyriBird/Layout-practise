@@ -1,0 +1,7 @@
+include ../input/input.pug
+
+.register-popup-container 
+    h1.register__heading.text_style_large-bold Регистрация аккаунта
+    +input({type: 'text', text: 'Имя'})
+    +input({type: 'text', text: 'Фамилия'})
+    +input({type: 'radio', text: ['Мужчина', 'Женщина']})
