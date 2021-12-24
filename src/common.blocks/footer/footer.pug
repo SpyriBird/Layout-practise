@@ -1,4 +1,5 @@
 include ../link/link.pug
+include ../input/input.pug
 
 footer.footer
     .footer-grid
@@ -26,8 +27,7 @@ footer.footer
             p.footer-column-header.text_style_small-bold подписка
             p.footer-under-subscribe-paragraph.text_style_usual Получайте специальные предложения и новости сервиса
             form.footer-subscribe-form
-                input(type="email", name="", placeholder="Email", required, value="").footer-input-email.text_style_usual-black
-                input(type="submit", value="").footer-submit
+                +input({type: 'email'})
     hr.footer-hr
     .footer-copyright-and-links-container
         p.copyright.text_style_usual Copyright © 2018 Toxin отель. Все права защищены.
