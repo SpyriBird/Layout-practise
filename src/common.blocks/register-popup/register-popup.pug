@@ -1,7 +1,18 @@
 include ../input/input.pug
+include ../button/button.pug
 
 .register-popup-container 
     h1.register__heading.text_style_large-bold Регистрация аккаунта
     +input({type: 'text', text: 'Имя'})
     +input({type: 'text', text: 'Фамилия'})
-    +input({type: 'radio', text: ['Мужчина', 'Женщина']})
+    +input({type: 'radio', text: ['Мужчина', 'Женщина'], name: 'sex'})
+    h2.text_style_small-bold дата рождения
+    +input({type: 'date'})
+    h2.text_style_small-bold данные для входа в сервис
+    +input({type: 'email'})
+    +input({type: 'password'})
+    div
+        +input({type: 'toggle', text: 'Получать спецпредложения', id: 'register-popup-toggle'})
+    +input({type: 'submit', text: 'зарегистрироваться'})
+    p.text_style_usual Уже есть аккаунт на Toxin
+    +button({class: 'header-btn', btnText: "войти", isWhite: true})

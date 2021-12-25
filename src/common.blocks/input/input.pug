@@ -10,8 +10,12 @@ mixin input(option)
     else if option.type === 'password'
         input(type="password", name="", placeholder="Password", required, value="").text_style_usual-black.input-password
     else if option.type === 'text'
-        input(type="text" placeholder=option.text)
+        input(type="text" placeholder=option.text).input-text
     else if option.type === 'radio'
         each val in option.text
             label= val
-            input(type="radio", value=val)
+                input(type="radio" name=option.name, value=val)
+    else if option.type === 'toggle'
+        input(type="checkbox" id=option.id).input-toggle
+        label(for=option.id).toggle-label
+            .label-content= option.text

@@ -1,0 +1,32 @@
+.toggle-label
+    position: relative 
+    display: inline-block
+    width: 40px
+    height: 20px
+    border-radius: 30px
+    border: 1px solid $gray1
+
+.toggle-label:after 
+    content: ''
+    position: absolute
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background-color: $gray1
+    top: 4px 
+    left: 4px
+    transition:  all 0.5s
+
+.input-toggle:checked + .toggle-label:after
+    left: 23px
+    background: $grad1
+
+.input-toggle:checked + .toggle-label
+    border: 1px solid $purple
+
+.input-toggle
+    display: none
+
+.label-content
+    margin-left: 50px
+    width: 300px
