@@ -5,7 +5,7 @@ include ../button/button.pug
     h1.register__heading.text_style_large-bold Регистрация аккаунта
     +input({type: 'text', text: 'Имя'})
     +input({type: 'text', text: 'Фамилия'})
-    +input({type: 'radio', text: ['Мужчина', 'Женщина'], name: 'sex'})
+    +input({type: 'radio', text: [['Мужчина', true], ['Женщина', false]], name: 'sex'})
     h2.text_style_small-bold дата рождения
     +input({type: 'date'})
     h2.text_style_small-bold данные для входа в сервис
