@@ -1,0 +1,30 @@
+.input-radio
+    position: relative
+    border: $gray1 solid 1px
+    cursor: pointer
+    transition: 0.2s all linear
+    -webkit-appearance: none
+    -moz-appearance: none
+    border-radius: 50%
+    width: 20px
+    height: 20px
+    display: inline-block
+
+.input-radio:checked:after
+    content: ''
+    position: absolute
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background: $grad1
+    top: 3px 
+    left: 3px
+    transition: all 0.5s
+    cursor: pointer
+
+.input-radio:checked
+    background: $white
+    border: $purple solid 1px
+
+.radio-label
+    cursor: pointer
