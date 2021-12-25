@@ -2,17 +2,24 @@ include ../input/input.pug
 include ../button/button.pug
 
 .register-popup-container 
-    h1.register__heading.text_style_large-bold Регистрация аккаунта
-    +input({type: 'text', text: 'Имя'})
-    +input({type: 'text', text: 'Фамилия'})
-    +input({type: 'radio', text: [['Мужчина', true], ['Женщина', false]], name: 'sex'})
-    h2.text_style_small-bold дата рождения
-    +input({type: 'date'})
-    h2.text_style_small-bold данные для входа в сервис
-    +input({type: 'email'})
-    +input({type: 'password'})
-    div
+    h1.register-popup__heading.text_style_large-bold Регистрация аккаунта
+    .register-popup__name
+        +input({type: 'text', text: 'Имя'})
+    .register-popup__surname
+        +input({type: 'text', text: 'Фамилия'})
+    .register-popup__sex
+        +input({type: 'radio', text: [['Мужчина', true], ['Женщина', false]], name: 'sex'})
+    h2.register-popup__field-heading.text_style_small-bold.register-popup__field-heading дата рождения
+    .register-popup__birth-date
+        +input({type: 'date'})
+    h2.register-popup__field-heading.text_style_small-bold данные для входа в сервис
+    .register-popup__email
+        +input({type: 'email'})
+    .register-popup__password
+        +input({type: 'password'})
+    .register-popup__special-offer
         +input({type: 'toggle', text: 'Получать спецпредложения', id: 'register-popup-toggle'})
-    +input({type: 'submit', text: 'зарегистрироваться'})
-    p.text_style_usual Уже есть аккаунт на Toxin
-    +button({class: 'header-btn', btnText: "войти", isWhite: true})
+    .register-popup__submit
+        +input({type: 'submit', text: 'зарегистрироваться'})
+    p.text_style_usual.register-popup__sign-in Уже есть аккаунт на Toxin
+        +button({class: 'register-popup-sign-in-btn', btnText: "войти", isWhite: true})
