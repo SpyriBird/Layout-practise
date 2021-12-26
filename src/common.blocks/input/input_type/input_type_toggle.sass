@@ -5,8 +5,9 @@
     height: 20px
     border-radius: 30px
     border: 1px solid $gray1
+    cursor: pointer
 
-.toggle-label:after 
+.toggle-label::after 
     content: ''
     position: absolute
     width: 12px
@@ -15,9 +16,10 @@
     background-color: $gray1
     top: 4px 
     left: 4px
-    transition:  all 0.5s
+    transition: all 0.5s
+    cursor: pointer
 
-.input-toggle:checked + .toggle-label:after
+.input-toggle:checked + .toggle-label::after
     left: 23px
     background: $grad1
 
@@ -28,5 +30,5 @@
     display: none
 
 .label-content
-    margin-left: 50px
+    padding-left: 50px
     width: 300px

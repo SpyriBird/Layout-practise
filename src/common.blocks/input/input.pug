@@ -1,6 +1,8 @@
 mixin input(option)
     if option.type === 'email-and-submit'
-        include ./input_type_email-and-submit/input_type_email-and-submit.pug
+        .input-email-and-submit-container
+            input(type="email", name="", placeholder="Email", required, value="").text_style_usual-black.input-email_submit
+            input(type="submit", value="").input-submit_email
     else if option.type === 'date'
         input(type="date" required).input_type_date
     else if option.type === 'submit' 
@@ -13,12 +15,14 @@ mixin input(option)
         input(type="text" placeholder=option.text required).input-text
     else if option.type === 'radio'
         each val in option.text
-            label= val[0]
-            if val[1]
-                input(type="radio" name=option.name, value=val[0] checked)
-            else
-                input(type="radio" name=option.name, value=val[0])
+            label.radio-label
+                if val[1]
+                    input(type="radio" name=option.name, value=val[0] checked).input-radio
+                else
+                    input(type="radio" name=option.name, value=val[0]).input-radio
+                = val[0]
     else if option.type === 'toggle'
-        input(type="checkbox" id=option.id).input-toggle
-        label(for=option.id).toggle-label
-            .label-content= option.text
+        .toggle-container
+            input(type="checkbox" id=option.id).input-toggle
+            label(for=option.id).toggle-label
+                .label-content= option.text
