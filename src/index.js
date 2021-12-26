@@ -17,3 +17,5 @@ function showRegisterPopup() {
 
 $(".sign-in-button").on("click", showSignInPopup);
 $(".register-button").on("click", showRegisterPopup);
+
+// $(".input-radio:checked").parent.attr('style', 'color: $gray3');

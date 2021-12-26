@@ -9,6 +9,7 @@
     width: 20px
     height: 20px
     display: inline-block
+    vertical-align: text-bottom
 
 .input-radio:checked:after
     content: ''
@@ -27,4 +28,9 @@
     border: $purple solid 1px
 
 .radio-label
+    padding: 0 .6em
     cursor: pointer
+    color: $gray2
+
+.input-radio:checked + .radio-label
+    color: $gray3

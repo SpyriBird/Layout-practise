@@ -8,7 +8,7 @@ include ../button/button.pug
     .register-popup__surname
         +input({type: 'text', text: 'Фамилия'})
     .register-popup__sex
-        +input({type: 'radio', text: [['Мужчина', true], ['Женщина', false]], name: 'sex'})
+        include ../sex-input-radio/sex-input-radio.pug
     h2.register-popup__field-heading.text_style_small-bold.register-popup__field-heading дата рождения
     .register-popup__birth-date
         +input({type: 'date'})
@@ -21,6 +21,7 @@ include ../button/button.pug
         +input({type: 'toggle', text: 'Получать спецпредложения', id: 'register-popup-toggle'})
     .register-popup__submit
         +input({type: 'submit', text: 'зарегистрироваться'})
-    p.text_style_usual.register-popup__sign-in Уже есть аккаунт на Toxin
-        .register-popup__sign-in-btn
+    .register-popup-sign-in-container
+        p.text_style_usual.register-popup__sign-in-par Уже есть аккаунт на Toxin
+        .register-popup__sign-in-button
             +button({class: 'sign-in-button', btnText: "войти", isWhite: true})

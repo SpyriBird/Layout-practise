@@ -1,8 +1,16 @@
 include ../input/input.pug
 
-.sign-in-window-container
+.sign-in-popup-container
     h1.sign-in__heading.text_style_large-bold Войти
-    form.sign-in-form(action="") 
-        +input({type: 'email'})
-        +input({type: 'password'})
-        +input({type: 'submit', text: 'войти'})
+    form(action="") 
+        .sign-in-popup__email
+            +input({type: 'email'})
+        .sign-in-popup__password
+            +input({type: 'password'})
+        .sign-in-popup__submit
+            +input({type: 'submit', text: 'войти'})
+    .sing-in-popup-create-account-container
+        p.text_style_usual.sign-in-popup__register-par Нет аккаунта на Toxin?
+        .sign-in-popup__register-button
+            +button({class: 'register-button', btnText: "создать", isWhite: true})
+

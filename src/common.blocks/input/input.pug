@@ -13,14 +13,6 @@ mixin input(option)
         input(type="password", name="", placeholder="Password", required, value="").text_style_usual-black.input-password
     else if option.type === 'text'
         input(type="text" placeholder=option.text required).input-text
-    else if option.type === 'radio'
-        each val in option.text
-            label.radio-label
-                if val[1]
-                    input(type="radio" name=option.name, value=val[0] checked).input-radio
-                else
-                    input(type="radio" name=option.name, value=val[0]).input-radio
-                = val[0]
     else if option.type === 'toggle'
         .toggle-container
             input(type="checkbox" id=option.id).input-toggle
