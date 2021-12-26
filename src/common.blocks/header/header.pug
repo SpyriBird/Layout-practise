@@ -12,5 +12,7 @@ header.header
             +link({class: 'header-link', linkText: "Новости", usual: true})
             +link({class: 'header-link',linkText: "Соглашения" , usual: true, hasArrow: true})
         form.header-form
-            +button({class: 'header-btn', btnText: "войти", isWhite: true, id: 'sign_in'})
-            +button({class: 'header-btn', btnText: "зарегистрироваться", isBlue: true, id: 'register'})
+            .header-btn
+                +button({class: 'sign-in-button', btnText: "войти", isWhite: true, id: 'sign_in'})
+            .header-btn
+                +button({class: 'register-button', btnText: "зарегистрироваться", isBlue: true, id: 'register'})

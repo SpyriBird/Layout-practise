@@ -22,4 +22,5 @@ include ../button/button.pug
     .register-popup__submit
         +input({type: 'submit', text: 'зарегистрироваться'})
     p.text_style_usual.register-popup__sign-in Уже есть аккаунт на Toxin
-        +button({class: 'register-popup-sign-in-btn', btnText: "войти", isWhite: true})
+        .register-popup__sign-in-btn
+            +button({class: 'sign-in-button', btnText: "войти", isWhite: true})
