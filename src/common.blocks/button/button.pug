@@ -3,7 +3,9 @@ mixin button(option)
       var btnClasses = "btn"
       btnClasses += option.isWhite ? " btn_theme_white" : "" 
       btnClasses += option.isBlue ? " btn_theme_blue" : ""   
+      btnClasses += option.isNarrow ? " btn_theme_narrow" : ""   
+      btnClasses += option.isWide ? " btn_theme_wide" : ""   
     div(class=option.class)
         if option.isWhite
         .btn-border-wrap
-            button(class=btnClasses, id=option.id)= option.btnText
+            button(class=btnClasses)= option.btnText

@@ -1,21 +1,37 @@
-.landing-page-search-window
+.search-popup-container
     background: $white
     width: 320px
     height: 304px
     padding: 25px 30px 45px 30px
     border-radius: 4px
 
-.landing-page-search-window__header
+.search-popup__header
     line-height: 29px
+    margin-bottom: .4em
 
-.arrival,
-.departure
+.search-popup-arrival-date-container,
+.search-popup-departure-date-container
     display: inline-block
     width: 50%
 
-.arrival-heading,
-.departure-heading
+.search-popup__arrival-heading
     display: inline-block
+    margin-bottom: .2rem
+    line-height: 1.6em
 
-.arrival-and-departure-dates
+.search-popup__departure-heading
+    display: inline-block
+    margin-bottom: .2rem
+    line-height: 1.6em
+    margin-left: .6rem
+
+.search-popup__arrival-date-input
+    width: 93%
+
+.search-popup__departure-date-input
+    width: 93%
+    margin-left: .6rem
+
+.search-popup-dates
     display: flex
+    justify-content: space-between

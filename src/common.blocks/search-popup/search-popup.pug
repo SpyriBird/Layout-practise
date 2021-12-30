@@ -1,14 +1,18 @@
 include ../input/input.pug
-.landing-page-search-window
-    h1.landing-page-search-window__header.text_style_large-bold Найдём номера под ваши пожелания
-    form.landing-page-search-form(action="") 
-        .arrival-and-departure-dates
-            .arrival
-                h2.arrival-heading.text_style_small-bold прибытие
-                +input({type: 'date'})
-            .departure
-                h2.departure-heading.text_style_small-bold выезд
-                +input({type: 'date'})
-        .guests-number
-            h2.guest-number-heading.text_style_small-bold гости
-            +input({type: ''})
+.search-popup-container
+    h1.search-popup__header.text_style_large-bold Найдём номера под ваши пожелания
+    form.search-popup-form(action="") 
+        .search-popup-dates
+            .search-popup-arrival-date-container
+                h2.search-popup__arrival-heading.text_style_small-bold прибытие
+                .search-popup__arrival-date-input
+                    input(type="text" required placeholder="ДД.ММ.ГГГГ").input-text.has-datepicker
+            .search-popup-departure-date-container
+                h2.search-popup__departure-heading.text_style_small-bold выезд
+                .search-popup__departure-date-input
+                    input(type="text" required placeholder="ДД.ММ.ГГГГ").input-text
+        .search-popup-guests-number-container
+            h2.search-popup__guest-number-heading.text_style_small-bold гости
+
+        .serch-popup__submit-button 
+            +input({type: "submit", text: "подобрать номер"})

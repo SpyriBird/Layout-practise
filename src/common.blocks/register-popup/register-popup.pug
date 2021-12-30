@@ -11,7 +11,7 @@ include ../button/button.pug
         include ../sex-input-radio/sex-input-radio.pug
     h2.register-popup__field-heading.text_style_small-bold.register-popup__field-heading дата рождения
     .register-popup__birth-date
-        +input({type: 'date'})
+        +input({type: 'text', text: 'ДД.ММ.ГГГГ'})
     h2.register-popup__field-heading.text_style_small-bold данные для входа в сервис
     .register-popup__email
         +input({type: 'email'})
@@ -24,4 +24,4 @@ include ../button/button.pug
     .register-popup-sign-in-container
         p.text_style_usual.register-popup__sign-in-par Уже есть аккаунт на Toxin
         .register-popup__sign-in-button
-            +button({class: 'sign-in-button', btnText: "войти", isWhite: true})
+            +button({class: 'sign-in-button', btnText: "войти", isWhite: true, isWide: true})

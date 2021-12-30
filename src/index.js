@@ -9,13 +9,15 @@ function showSignInPopup() {
 };
 
 function showRegisterPopup() {
-    $(".main__search-popup").attr('style', 'display: none');
+    $(".main__search-popup").css("display", "none");
     $(".main__register-popup").attr('style', 'display: block');
     $(".main__sign-in-popup").attr('style', 'display: none');
     return false;
 };
 
-$(".sign-in-button").on("click", showSignInPopup);
-$(".register-button").on("click", showRegisterPopup);
+$(document).ready(function() {
+    $(".sign-in-button").on("click", showSignInPopup);
+    $(".register-button").on("click", showRegisterPopup);
+});
 
-// $(".input-radio:checked").parent.attr('style', 'color: $gray3');
+import './common.blocks/datepicker/datepicker'

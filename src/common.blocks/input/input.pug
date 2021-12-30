@@ -4,7 +4,7 @@ mixin input(option)
             input(type="email", name="", placeholder="Email", required, value="").text_style_usual-black.input-email_submit
             input(type="submit", value="").input-submit_email
     else if option.type === 'date'
-        input(type="date" required).input_type_date
+        input(type="text" required placeholder="ДД.ММ.ГГГГ").input_type_date.has-datepicker
     else if option.type === 'submit' 
         input(type="submit" value=option.text).input-submit
     else if option.type === 'email'

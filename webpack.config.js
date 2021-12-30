@@ -1,6 +1,7 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+//const ProvidePlugin = require('provide-plugin');
 const path = require('path');
 
 module.exports = {
@@ -32,7 +33,11 @@ module.exports = {
         new HtmlWebpackPugPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css'
-        })
+        }),
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery',
+        // })
     ],
     module: {
         rules: [{
@@ -42,6 +47,13 @@ module.exports = {
             {
                 test: /\.pug$/,
                 loader: 'pug-loader'
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
             },
             {
                 test: /\.s[ac]ss$/,
