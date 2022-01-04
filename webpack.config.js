@@ -1,8 +1,8 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-//const ProvidePlugin = require('provide-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -25,24 +25,33 @@ module.exports = {
         port: 4200,
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+        }),
         new HTMLWebpackPlugin({
             filename: 'index.html',
             minify: false,
             template: 'index.pug'
         }),
+        new HTMLWebpackPlugin({
+            filename: 'search-result.html',
+            minify: false,
+            template: 'search-result.pug'
+        }),
         new HtmlWebpackPugPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css'
         }),
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery',
-        //     jQuery: 'jquery',
-        // })
     ],
     module: {
         rules: [{
                 test: /\.(png|svg|jpg|jpeg|gif|ttf|woff|ico)$/i,
                 type: 'asset/resource',
+            },
+            {
+                test: /\.js.map$/,
+                use: ["source-map-loader"],
             },
             {
                 test: /\.pug$/,
