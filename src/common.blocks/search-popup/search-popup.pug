@@ -13,6 +13,7 @@ include ../input/input.pug
                     input(type="text" required placeholder="ДД.ММ.ГГГГ").input-text
         .search-popup-guests-number-container
             h2.search-popup__guest-number-heading.text_style_small-bold гости
-
+            .search-popup__guest-number-input
+                input(type="text" required placeholder="Сколько гостей").input-text.has-i-q-control
         .serch-popup__submit-button 
             +input({type: "submit", text: "подобрать номер"})

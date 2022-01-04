@@ -1,5 +1,5 @@
-import './style.sass'
 import * as $ from 'jquery'
+import './style.sass'
 
 function showSignInPopup() {
     $(".main__search-popup").attr('style', 'display: none');
@@ -21,3 +21,4 @@ $(document).ready(function() {
 });
 
 import './common.blocks/datepicker/datepicker'
+// import './common.blocks/guest-number-control-element/guest-number-control-element'

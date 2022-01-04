@@ -1,6 +1,6 @@
 import * as $ from 'jquery'
 import 'webpack-jquery-ui'
-import 'webpack-jquery-ui/'
+//import 'jquery-ui-multidatespicker'
 
 (function(factory) {
     "use strict";
@@ -14,7 +14,8 @@ import 'webpack-jquery-ui/'
         // Browser globals
         factory($.datepicker);
     }
-})(function(datepicker) {
+})
+(function(datepicker) {
     "use strict";
 
     datepicker.regional.ru = {
@@ -51,6 +52,5 @@ $(".has-datepicker").datepicker({
     showOtherMonths: true,
     selectOtherMonths: true,
     nextText: "Later",
-    firstDay: 1,
     showButtonPanel: true
 });
