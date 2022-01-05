@@ -8,7 +8,16 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: './index.js'
+        index: [
+            '/index.pug',
+            '/index.js',
+            '/style.sass'
+        ],
+        'search-result': [
+            '/search-result.js',
+            '/search-result.pug',
+            '/search-result.sass'
+        ]
     },
     output: {
         filename: '[name].js',
@@ -32,12 +41,14 @@ module.exports = {
         new HTMLWebpackPlugin({
             filename: 'index.html',
             minify: false,
-            template: 'index.pug'
+            template: 'index.pug',
+            chunks: ['index']
         }),
         new HTMLWebpackPlugin({
             filename: 'search-result.html',
             minify: false,
-            template: 'search-result.pug'
+            template: 'search-result.pug',
+            chunks: ['search-result']
         }),
         new HtmlWebpackPugPlugin(),
         new MiniCssExtractPlugin({
@@ -48,6 +59,9 @@ module.exports = {
         rules: [{
                 test: /\.(png|svg|jpg|jpeg|gif|ttf|woff|ico)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'static/[hash][ext][query]'
+                }
             },
             {
                 test: /\.js.map$/,
