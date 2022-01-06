@@ -1,0 +1,39 @@
+mixin room-block(options)
+    - var starCounter = 0
+    - var reviewLastDigit = options.review % 10
+    .hotel-room-block 
+        .room-picture-container
+
+        .room-detail-container
+            .room-number-and-price-container
+                span.room__number= "№ " 
+                    strong= options.number
+                if options.isSuite 
+                    span.room__suite люкс
+                span.room__price
+                    b= options.price + "₽ "
+                    | в сутки
+            hr.room__hr
+            .room-rating-and-review-container
+                span.room__rating 
+                    while starCounter < options.stars 
+                        - starCounter++
+                        img(src=require("./common.blocks/hotel-room-block/star.png")).rating-star
+                    while starCounter < 5
+                        - starCounter++
+                        img(src=require("./common.blocks/hotel-room-block/star_empty.png")).rating-star
+                span.room__reviews 
+                    case reviewLastDigit
+                        when 1
+                            b= options.review + " "
+                            | Отзыв
+                        when 2
+                        when 3
+                        when 4
+                            b= options.review + " "
+                            | Отзыва
+                        default 
+                            b= options.review + " "
+                            | Отзывов
+
+
