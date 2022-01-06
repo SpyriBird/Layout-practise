@@ -1,0 +1,1 @@
+import './common.blocks/price-slider/price-slider'

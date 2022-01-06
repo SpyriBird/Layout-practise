@@ -1,17 +1,17 @@
 
 aside.aside 
-    a(href="index.html") link
-    h2.text_style_small-bold даты пребывания в отеле
+    form.aside-form
+        a(href="index.html") link
+        h2.text_style_small-bold даты пребывания в отеле
 
-    h2.text_style_small-bold гости
-    h2.text_style_small-bold диапазон цены
-    .aside__price-slider 
-        include ../price-slider/price-slider
-    h2.text_style_small-bold правила дома
-    .aside__house-rules
-        include ../checkbox/checkbox
-    h2.text_style_small-bold доступность
-    .aside__accessibility
-        include ../rich-checkbox/rich-checkbox
-    h2.text_style_small-bold удобства номера
-    h2.text_style_small-bold дополнительные удобства
+        h2.text_style_small-bold гости
+        .aside__price-slider 
+            include ../price-slider/price-slider
+        h2.text_style_small-bold правила дома
+        .aside__house-rules
+            include ../checkbox/checkbox
+        h2.text_style_small-bold доступность
+        .aside__accessibility
+            include ../rich-checkbox/rich-checkbox
+        h2.text_style_small-bold удобства номера
+        h2.text_style_small-bold дополнительные удобства

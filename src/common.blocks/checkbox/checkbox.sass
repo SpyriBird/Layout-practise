@@ -1,13 +1,15 @@
 .checkbox-label
     display: block
     cursor: pointer
-    margin: 1em 0 1em 3em
-    position: relative 
+    margin: 1em 0 1em 0
 
-.checkbox-label::before
-    content: ''
-    position: absolute
-    left: -30px
+.input-checkbox:checked 
+    border: solid 1px $gray2 
+    background: url("./common.blocks/checkbox/tick.png") no-repeat  
+    background-position: center
+
+.input-checkbox
+    -webkit-appearance: none
     width: 20px
     height: 20px
     border-radius: 4px
@@ -15,11 +17,3 @@
     background-color: $white
     transition: all 0.5s
     cursor: pointer
-
-.input-checkbox:checked + .checkbox-label::before
-    border: solid 1px $gray2 
-    background: url("./common.blocks/checkbox/tick.png") no-repeat  
-    background-position: center
-
-.input-checkbox
-    display: none
