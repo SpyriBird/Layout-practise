@@ -15,6 +15,6 @@ mixin input(option)
         input(type="text" placeholder=option.text required).input-text
     else if option.type === 'toggle'
         .toggle-container
-            input(type="checkbox" id=option.id).input-toggle
-            label(for=option.id).toggle-label
+            label.toggle-label
+                input(type="checkbox").input-toggle
                 .label-content= option.text

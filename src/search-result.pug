@@ -13,5 +13,7 @@ html(lang="ru")
         .body-content-wrapper
             .everything-except-footer
                 include common.blocks/header/header.pug
-                include common.blocks/aside/aside.pug
+                .main-and-aside-container
+                    include common.blocks/aside/aside.pug
+                    include common.blocks/search-result-page-main/main.pug
             include common.blocks/footer/footer.pug

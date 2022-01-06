@@ -1,5 +1,5 @@
-import * as $ from 'jquery'
-import './style.sass'
+import './common.blocks/datepicker/datepicker'
+import './common.blocks/guest-number-control-element/guest-number-control-element'
 
 function showSignInPopup() {
     $(".main__search-popup").attr('style', 'display: none');
@@ -15,10 +15,14 @@ function showRegisterPopup() {
     return false;
 };
 
+// function showUserName(form) {
+//     $("form.header-form").css("display", "none");
+//     $(".header-username-container").css('display', 'block').html(form.useremail);
+//     return false;
+// };
+
 $(document).ready(function() {
     $(".sign-in-button").on("click", showSignInPopup);
     $(".register-button").on("click", showRegisterPopup);
+    //$(".sign-in-popup__submit input").on("click", showUserName(this.form));
 });
-
-import './common.blocks/datepicker/datepicker'
-// import './common.blocks/guest-number-control-element/guest-number-control-element'

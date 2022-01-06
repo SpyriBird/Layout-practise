@@ -1,21 +1,19 @@
 include ../input/input.pug
-.search-popup-container
+form(action="", method="get").search-popup-container
     h1.search-popup__header.text_style_large-bold Найдём номера под ваши пожелания
-    form.search-popup-form(action="") 
-        .search-popup-dates
-            .search-popup-arrival-date-container
-                h2.search-popup__arrival-heading.text_style_small-bold прибытие
-                .search-popup__arrival-date-input
-                    input(type="text" required placeholder="ДД.ММ.ГГГГ").input-text.has-datepicker.arrival
-            .search-popup-departure-date-container
-                h2.search-popup__departure-heading.text_style_small-bold выезд
-                .search-popup__departure-date-input
-                    input(type="text" required placeholder="ДД.ММ.ГГГГ").input-text.has-datepicker.departure
-        .search-popup-guests-number-container
-            a(href="search-result.html") link
-            h2.search-popup__guest-number-heading.text_style_small-bold гости
-            .search-popup__guest-number-input
-                input(type="text" required placeholder="Сколько гостей").input-text.has-i-q-control
-        .serch-popup__submit-button 
-            
-                +input({type: "submit", text: "подобрать номер"})
+    .search-popup-dates
+        .search-popup-arrival-date-container
+            h2.search-popup__arrival-heading.text_style_small-bold прибытие
+            .search-popup__arrival-date-input
+                input(type="text" required placeholder="ДД.ММ.ГГГГ").input-text.has-datepicker.arrival
+        .search-popup-departure-date-container
+            h2.search-popup__departure-heading.text_style_small-bold выезд
+            .search-popup__departure-date-input
+                input(type="text" required placeholder="ДД.ММ.ГГГГ").input-text.has-datepicker.departure
+    .search-popup-guests-number-container
+        a(href="search-result.html") link
+        h2.search-popup__guest-number-heading.text_style_small-bold гости
+        .search-popup__guest-number-input
+            include ../guest-number-control-element/guest-number-control-element
+    .serch-popup__submit-button 
+        +input({type: "submit", text: "подобрать номер"})

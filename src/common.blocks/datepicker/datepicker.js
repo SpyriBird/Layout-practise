@@ -1,4 +1,3 @@
-import * as $ from 'jquery'
 import 'webpack-jquery-ui'
 //import 'jquery-ui-multidatespicker'
 
@@ -19,10 +18,10 @@ import 'webpack-jquery-ui'
     "use strict";
 
     datepicker.regional.ru = {
-        closeText: "Закрыть",
+        closeText: "Применить",
         prevText: "&#x3C;Пред",
         nextText: "След&#x3E;",
-        currentText: "Сегодня",
+        currentText: "Очистить",
         monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
             "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
         ],
@@ -45,12 +44,17 @@ import 'webpack-jquery-ui'
 
 });
 
+var dateToday = new Date();
+var arrDate;
+
 $(".has-datepicker").datepicker({
     showOn: "focus",
     showOtherMonths: true,
-    altField: ".has-datepicker",
-    showOtherMonths: true,
     selectOtherMonths: true,
     nextText: "Later",
-    showButtonPanel: true
+    showButtonPanel: true,
+    onSelect: function(dateText) {
+        arrDate = this.value;
+    },
+    minDate: dateToday,
 });
