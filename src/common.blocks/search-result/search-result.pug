@@ -1,0 +1,11 @@
+include ../hotel-room-block/hotel-room-block
+
+main.search-result
+    h1.search-result__heading.text_style_large-bold Номера, которые мы для вас подобрали
+    .rooms-container
+        +room-block({number: "840", price: "9 900", stars: 4, review: 65, imageSrc: 'image.jpg'})
+        +room-block({number: "888", price: "9 990", stars: 5, review: 145, isSuite: true})
+        +room-block({number: "888", price: "9 990", stars: 5, review: 145, isSuite: true})
+        +room-block({number: "888", price: "9 990", stars: 5, review: 145, isSuite: true})
+        +room-block({number: "888", price: "9 990", stars: 5, review: 145, isSuite: true})
+        +room-block({number: "888", price: "9 990", stars: 5, review: 145, isSuite: true})
