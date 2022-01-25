@@ -10,13 +10,20 @@ module.exports = {
     entry: {
         index: [
             '/index.pug',
-            '/index.js',
-            '/style.sass'
+            '/index.js'
         ],
         'search-result': [
-            '/search-result.js',
-            '/search-result.pug',
-            '/search-result.sass'
+            '/index.js',
+            '/search-result.pug'
+        ],
+        style: '/style.sass',
+        'sign-in': [
+            '/sign-in.pug',
+            '/index.js'
+        ],
+        registration: [
+            '/registration.pug',
+            '/index.js'
         ]
     },
     output: {
@@ -45,10 +52,22 @@ module.exports = {
             chunks: ['index']
         }),
         new HTMLWebpackPlugin({
+            filename: 'sign-in.html',
+            minify: false,
+            template: 'sign-in.pug',
+            chunks: ['sign-in']
+        }),
+        new HTMLWebpackPlugin({
             filename: 'search-result.html',
             minify: false,
             template: 'search-result.pug',
             chunks: ['search-result']
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'registration.html',
+            minify: false,
+            template: 'registration.pug',
+            chunks: ['registration']
         }),
         new HtmlWebpackPugPlugin(),
         new MiniCssExtractPlugin({
