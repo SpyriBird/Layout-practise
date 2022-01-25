@@ -1,28 +1,20 @@
-import './common.blocks/datepicker/datepicker'
+import { datepicker } from './common.blocks/datepicker/datepicker'
+import { priceSlider } from './common.blocks/price-slider/price-slider'
+import { parseRegisterForm } from './common.blocks/register-popup/registration-form'
+import { slideshow } from './common.blocks/landing-page-main/landing-page-main'
 import './common.blocks/guest-number-control-element/guest-number-control-element'
 
-function showSignInPopup() {
-    $(".main__search-popup").attr('style', 'display: none');
-    $(".main__register-popup").attr('style', 'display: none');
-    $(".main__sign-in-popup").attr('style', 'display: block');
+function goTo(href) {
+    window.location.href = href;
     return false;
 };
 
-function showRegisterPopup() {
-    $(".main__search-popup").css("display", "none");
-    $(".main__register-popup").attr('style', 'display: block');
-    $(".main__sign-in-popup").attr('style', 'display: none');
-    return false;
-};
-
-// function showUserName(form) {
-//     $("form.header-form").css("display", "none");
-//     $(".header-username-container").css('display', 'block').html(form.useremail);
-//     return false;
-// };
 
 $(document).ready(function() {
-    $(".sign-in-button").on("click", showSignInPopup);
-    $(".register-button").on("click", showRegisterPopup);
-    //$(".sign-in-popup__submit input").on("click", showUserName(this.form));
+    $(".sign-in-button").on("click", () => goTo("sign-in.html"));
+    $(".register-button").on("click", () => goTo("registration.html"));
+    priceSlider();
+    parseRegisterForm();
+    datepicker();
+    slideshow([$('.js-landing-page__background-1'), $('.js-landing-page__background-2'), $('.js-landing-page__background-3')]);
 });

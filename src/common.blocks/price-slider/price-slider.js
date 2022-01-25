@@ -1,7 +1,7 @@
 import 'webpack-jquery-ui'
 
-function priceSlider() {
-    $(".price-slider__bar").slider({
+export function priceSlider() {
+    $(".js-price-slider__bar").slider({
         range: true,
         min: 0,
         max: 15000,
@@ -12,8 +12,4 @@ function priceSlider() {
     });
     $(".price-slider__input").val($(".price-slider__bar").slider("values", 0) +
         "₽ - " + $(".price-slider__bar").slider("values", 1) + "₽");
-};
-
-$(document).ready(function() {
-    priceSlider();
-});
+}
