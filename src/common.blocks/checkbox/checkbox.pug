@@ -1,9 +1,6 @@
-label.text_style_small.checkbox-label 
-    input(type="checkbox").input-checkbox
-    | Можно курить
-label.text_style_small.checkbox-label 
-    input(type="checkbox").input-checkbox
-    | Можно с питомцами
-label.text_style_small.checkbox-label 
-    input(type="checkbox").input-checkbox
-    | Можно пригласить гостей (до 10 человек)
+mixin checkbox(options)
+    each val in options.labels
+        label.text_style_small.checkbox-label 
+            input(type="checkbox").input-checkbox
+            | #{val}
+
