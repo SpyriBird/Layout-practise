@@ -1,9 +1,8 @@
 mixin room-block(options)
-    - var starCounter = 0
-    - var reviewLastDigit = options.review % 10
+ 
     .hotel-room-block 
         .room-picture-container
-
+            img(src=require(`./common.blocks/search-result/image.jpg`) alt="room photo")
         .room-detail-container
             .room-number-and-price-container
                 span.room__number= "№ " 
@@ -16,6 +15,7 @@ mixin room-block(options)
             hr.room__hr
             .room-rating-and-review-container
                 span.room__rating 
+                    - var starCounter = 0
                     while starCounter < options.stars 
                         - starCounter++
                         img(src=require("./common.blocks/hotel-room-block/star.png")).rating-star
@@ -23,6 +23,7 @@ mixin room-block(options)
                         - starCounter++
                         img(src=require("./common.blocks/hotel-room-block/star_empty.png")).rating-star
                 span.room__reviews 
+                - var reviewLastDigit = options.review % 10
                     case reviewLastDigit
                         when 1
                             b= options.review + " "
