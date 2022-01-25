@@ -14,6 +14,6 @@ form(action="", method="get").search-popup-container
         h2.search-popup__guest-number-heading.text_style_small-bold гости
         .search-popup__guest-number-input
             include ../guest-number-control-element/guest-number-control-element
-    .serch-popup__submit-button
-        a(href="search-result.html")
-            +input({type: "submit", text: "подобрать номер"})
+    .search-popup__submit-button
+        +input({type: "submit", text: "подобрать номер"})
+    a(href="search-result.html").link link

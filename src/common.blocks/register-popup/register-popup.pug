@@ -1,7 +1,7 @@
 include ../input/input.pug
 include ../button/button.pug
 
-form(action="", method="post" name="registration").register-popup-container 
+form(name="registration").register-popup-container.js-register-form
     h1.register-popup__heading.text_style_large-bold Регистрация аккаунта
     .register-popup__name
         +input({type: 'text', text: 'Имя'})

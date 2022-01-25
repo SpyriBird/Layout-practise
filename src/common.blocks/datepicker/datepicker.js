@@ -1,5 +1,4 @@
 import 'webpack-jquery-ui'
-//import 'jquery-ui-multidatespicker'
 
 (function(factory) {
     "use strict";
@@ -43,18 +42,16 @@ import 'webpack-jquery-ui'
     return datepicker.regional.ru;
 
 });
-
-var dateToday = new Date();
-var arrDate;
-
-$(".has-datepicker").datepicker({
-    showOn: "focus",
-    showOtherMonths: true,
-    selectOtherMonths: true,
-    nextText: "Later",
-    showButtonPanel: true,
-    onSelect: function(dateText) {
-        arrDate = this.value;
-    },
-    minDate: dateToday,
-});
+export function datepicker() {
+    $(".has-datepicker").datepicker({
+        showOn: "focus",
+        showOtherMonths: true,
+        selectOtherMonths: true,
+        nextText: "Later",
+        showButtonPanel: true,
+        onSelect: function(dateText) {
+            let arrDate = this.value;
+        },
+        minDate: new Date(),
+    });
+}

@@ -12,9 +12,9 @@ mixin input(option)
     else if option.type === 'password'
         input(type="password", name="", placeholder="Password", required, value="").text_style_usual-black.input-password
     else if option.type === 'text'
-        input(type="text" placeholder=option.text required).input-text
+        input(type="text" placeholder=option.text required value="").input-text
     else if option.type === 'toggle'
         .toggle-container
             label.toggle-label
                 input(type="checkbox").input-toggle
-                .label-content= option.text
+                | #{option.text}

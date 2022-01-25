@@ -7,12 +7,12 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="icon", type="image/png", href=require('./favicon.png'))
-        link(rel="stylesheet", type="text/css" href="index.css")
+        link(rel="stylesheet", type="text/css" href="style.css")
         title Toxin
         
     body 
         .body-content-wrapper
             .everything-except-footer
                 include common.blocks/header/header.pug
-                include common.blocks/landing-page-main/main.pug
+                include common.blocks/landing-page-main/landing-page-main.pug
             include common.blocks/footer/footer.pug

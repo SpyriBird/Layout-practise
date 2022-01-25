@@ -1,5 +1,6 @@
 export function slideshow(show) {
 
+    if (show.length === 0) return;
     let count = 1;
 
     setInterval(() => {
