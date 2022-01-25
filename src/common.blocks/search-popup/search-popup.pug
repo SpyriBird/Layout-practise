@@ -11,9 +11,9 @@ form(action="", method="get").search-popup-container
             .search-popup__departure-date-input
                 input(type="text" required placeholder="ДД.ММ.ГГГГ").input-text.has-datepicker.departure
     .search-popup-guests-number-container
-        a(href="search-result.html") link
         h2.search-popup__guest-number-heading.text_style_small-bold гости
         .search-popup__guest-number-input
             include ../guest-number-control-element/guest-number-control-element
-    .serch-popup__submit-button 
-        +input({type: "submit", text: "подобрать номер"})
+    .serch-popup__submit-button
+        a(href="search-result.html")
+            +input({type: "submit", text: "подобрать номер"})
