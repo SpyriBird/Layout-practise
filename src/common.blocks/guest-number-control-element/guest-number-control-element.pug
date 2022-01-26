@@ -1,16 +1,24 @@
-input(type="text" required placeholder="Сколько гостей").input-text.has-i-q-control
-//- .i-q-control.iqdropdown
-//-     p(data-selection-text="гость" data-text-plural="гостя").iqdropdown-selection
-//-     .iqdropdown-menu
-//-         div(data-id="item1").iqdropdown-menu-option
-//-             div
-//-                 p.iqdropdown-item взрослые
-//-                 p.iqdropdown-description
-//-         div(data-id="item2").iqdropdown-menu-option
-//-             div
-//-                 p.iqdropdown-item дети
-//-                 p.iqdropdown-description
-//-         div(data-id="item3").iqdropdown-menu-option
-//-             div
-//-                 p.iqdropdown-item младенцы
-//-                 p.iqdropdown-description
+.guest-number-control-container
+    input(type="text" required placeholder="Сколько гостей" value='').input-text.js-guest-number-control-element
+    div(hidden).guest-number-dropdown-container
+        .guest-number-adults.guest-number-field
+            div.guest-number__adults.text_style_small-bold взрослые
+            div
+                button(type="button").js-guest-number__adults-decrease-button.guest-number-button.guest-number-button__inactive -
+                .js-guest-number__adults-current-number.guest-number-current-number.text_style_small-bold 0
+                button(type="button").js-guest-number__adults-increase-button.guest-number-button.guest-number-button__active +
+        .guest-number-children.guest-number-field
+            span.guest-number__children.text_style_small-bold дети
+            div
+                button(type="button").js-guest-number__children-decrease-button.guest-number-button.guest-number-button__inactive -
+                .js-guest-number__children-current-number.guest-number-current-number.text_style_small-bold 0
+                button(type="button").js-guest-number__children-increase-button.guest-number-button.guest-number-button__active +
+        .guest-number-babies.guest-number-field
+            span.guest-number__babies.text_style_small-bold младенцы
+            div
+                button(type="button").js-guest-number__babies-decrease-button.guest-number-button.guest-number-button__inactive -
+                .js-guest-number__babies-current-number.guest-number-current-number.text_style_small-bold 0
+                button(type="button").js-guest-number__babies-increase-button.guest-number-button.guest-number-button__active +
+        .guest-number-controls
+            button(type="button").js-guest-number__clear-button очистить
+            button(type="button").js-guest-number__apply-button применить

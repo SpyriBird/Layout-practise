@@ -1,53 +1,65 @@
 export class Guests {
 
-    _children = 0;
+    constructor() {
 
-    get children() {
-        return _children;
+        this.options = ['adults', 'children', 'babies'];
+        this.input = $('.js-guest-number-control-element');
+
+        for (let opt of this.options) {
+
+            this['_' + opt] = 0;
+
+            this[opt + 'CurrentNumber'] = $(".js-guest-number__" + opt + "-current-number");
+            this[opt + 'IncreaseButton'] = $('.js-guest-number__' + opt + '-increase-button');
+            this[opt + 'DecreaseButton'] = $('.js-guest-number__' + opt + '-decrease-button');
+        }
+
+        this.dropdown = $('.guest-number-dropdown-container');
+        this.clearButton = $('.js-guest-number__clear-button');
+        this.applyButton = $('.js-guest-number__apply-button');
+
+        this.addEventHandlers();
     }
 
-    set children(value) {
+    setOptionValue(value, opt) {
 
         if (value < 0) return;
-        _children = value;
+
+        if (value === 0) this.inactivateDecreaseButton(opt);
+        if (value === 1) this.activateDecreaseButton(opt);
+
+        this['_' + opt] = value;
+        this[opt + 'CurrentNumber'].html(this['_' + opt]);
+
+        this.input.val(this.currentValue);
 
         return;
     }
 
-    _babies = 0;
+    activateDecreaseButton(opt) {
 
-    get babies() {
-        return _babies;
+        this[opt + 'DecreaseButton'].removeClass('guest-number-button__inactive')
+            .addClass('guest-number-button__active');
     }
 
-    set babies(value) {
+    inactivateDecreaseButton(opt) {
 
-        if (value < 0) return;
-        _babies = value;
-
-        return;
-    }
-
-    _adults = 0;
-
-    get adults() {
-        return _adults;
-    }
-
-    set adults(value) {
-
-        if (value < 0) return;
-        _adults = value;
-
-        return;
+        this[opt + 'DecreaseButton'].removeClass('guest-number-button__active')
+            .addClass('guest-number-button__inactive');
     }
 
     get currentValue() {
 
-        let guestsNumber = this.babies + this.children + this.adults;
+        let guestsNumber = this._babies + this._children + this._adults;
         let result = String(guestsNumber);
 
-        switch (questsNumber % 10) {
+        if (guestsNumber > 10 && guestsNumber < 20) {
+
+            result += ' гостей';
+            return result;
+        }
+
+        switch (guestsNumber % 10) {
             case 1:
                 result += ' гость';
                 break;
@@ -64,14 +76,24 @@ export class Guests {
         return result;
     }
 
-    input = $('.js-guest-number-control-element');
+    clearQuantities() {
 
-    createDropdown() {
-
+        for (let opt of this.options) {
+            this.setOptionValue(0, opt);
+        }
     }
 
-    showDropdown() {
+    addEventHandlers() {
+        for (let opt of this.options) {
 
+            this[opt + 'IncreaseButton'].on('click', () => this.setOptionValue(1 + this['_' + opt], opt));
+            this[opt + 'DecreaseButton'].on('click', () => this.setOptionValue(this['_' + opt] - 1, opt));
+        }
+
+        this.input.on('click', () => this.dropdown.removeAttr('hidden'));
+
+        this.applyButton.on('click', () => this.dropdown.attr('hidden', 'hidden'));
+        this.clearButton.on('click', () => this.clearQuantities());
     }
 
 }

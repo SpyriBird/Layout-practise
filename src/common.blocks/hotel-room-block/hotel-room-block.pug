@@ -24,17 +24,21 @@ mixin room-block(options)
                         img(src=require("./common.blocks/hotel-room-block/star_empty.png")).rating-star
                 span.room__reviews 
                 - var reviewLastDigit = options.review % 10
-                    case reviewLastDigit
-                        when 1
-                            b= options.review + " "
-                            | Отзыв
-                        when 2
-                        when 3
-                        when 4
-                            b= options.review + " "
-                            | Отзыва
-                        default 
-                            b= options.review + " "
-                            | Отзывов
+                    if (options.review > 10 && options.review < 20)
+                        b= options.review + " "
+                        | Отзывов
+                    else
+                        case reviewLastDigit
+                            when 1
+                                b= options.review + " "
+                                | Отзыв
+                            when 2
+                            when 3
+                            when 4
+                                b= options.review + " "
+                                | Отзыва
+                            default 
+                                b= options.review + " "
+                                | Отзывов
 
 
