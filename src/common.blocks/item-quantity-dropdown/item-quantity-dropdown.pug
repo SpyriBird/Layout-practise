@@ -1,0 +1,15 @@
+mixin i-q-dropdown(option)
+    .i-q-dropdown-control-container
+        input(type="text" required placeholder="Сколько гостей" class=`js-${option.comp}-control-element`).input-text
+        div(hidden class=`js-${option.comp}-dropdown-container`).i-q-dropdown-dropdown-container.js-guest-number-dropdown-container
+            each val, index in option.options
+                .i-q-dropdown-field
+                    div.guest-number__adults.text_style_small-bold= option.optionNames[index]
+                    div
+                        button(type="button" class=`js-${option.comp}__${val}-decrease-button`).i-q-dropdown-button.i-q-dropdown-button__inactive -
+                        div(class=`js-${option.comp}__${val}-current-number`).i-q-dropdown-current-number.text_style_small-bold 0
+                        button(type="button" class=`js-${option.comp}__${val}-increase-button`).i-q-dropdown-button.i-q-dropdown-button__active +
+            if option.hasButtons
+                .i-q-dropdown-controls
+                    button(type="button" class=`js-${option.comp}__clear-button`).i-q-dropdown-controls__button очистить
+                    button(type="button" class=`js-${option.comp}__apply-button`).i-q-dropdown-controls__button применить

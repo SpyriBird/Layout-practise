@@ -1,24 +1,3 @@
-.i-q-dropdown-control-container
-    input(type="text" required placeholder="Сколько гостей" value='').input-text.js-guest-number-control-element
-    div(hidden).i-q-dropdown-dropdown-container.js-guest-number-dropdown-container
-        .guest-number-adults.i-q-dropdown-field
-            div.guest-number__adults.text_style_small-bold взрослые
-            div
-                button(type="button").js-guest-number__adults-decrease-button.i-q-dropdown-button.i-q-dropdown-button__inactive -
-                .js-guest-number__adults-current-number.i-q-dropdown-current-number.text_style_small-bold 0
-                button(type="button").js-guest-number__adults-increase-button.i-q-dropdown-button.i-q-dropdown-button__active +
-        .guest-number-children.i-q-dropdown-field
-            span.guest-number__children.text_style_small-bold дети
-            div
-                button(type="button").js-guest-number__children-decrease-button.i-q-dropdown-button.i-q-dropdown-button__inactive -
-                .js-guest-number__children-current-number.i-q-dropdown-current-number.text_style_small-bold 0
-                button(type="button").js-guest-number__children-increase-button.i-q-dropdown-button.i-q-dropdown-button__active +
-        .guest-number-babies.i-q-dropdown-field
-            span.guest-number__babies.text_style_small-bold младенцы
-            div
-                button(type="button").js-guest-number__babies-decrease-button.i-q-dropdown-button.i-q-dropdown-button__inactive -
-                .js-guest-number__babies-current-number.i-q-dropdown-current-number.text_style_small-bold 0
-                button(type="button").js-guest-number__babies-increase-button.i-q-dropdown-button.i-q-dropdown-button__active +
-        .i-q-dropdown-controls
-            button(type="button").js-guest-number__clear-button очистить
-            button(type="button").js-guest-number__apply-button применить
+include ../item-quantity-dropdown/item-quantity-dropdown
+
++i-q-dropdown({comp: 'guest-number', options: ['adults', 'children', 'babies'], optionNames: ['взрослые', 'дети', 'младенцы'], hasButtons: true})

@@ -33,8 +33,8 @@ $(document).ready(function() {
 
     slideshow(createBackgroundArray());
 
-    let guests = new UnitedQuantityIQDropdown(['adults', 'children', 'babies'], 'guest-number', ['гостей', 'гость', 'гостя']);
-    let facilities = new SeparateQuantitiesIQDropdown(['bedrooms', 'beds', 'bathrooms'], 'room-facilities', {
+    new UnitedQuantityIQDropdown(['adults', 'children', 'babies'], 'guest-number', ['гостей', 'гость', 'гостя']);
+    new SeparateQuantitiesIQDropdown(['bedrooms', 'beds', 'bathrooms'], 'room-facilities', {
         bedrooms: ['кроватей', 'кровать', 'кровати'],
         beds: ['спален', 'спальня', 'спальни'],
         bathrooms: ['ванных комнат', 'ванная комната', 'ванные комнаты']
