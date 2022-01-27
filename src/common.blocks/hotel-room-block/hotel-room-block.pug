@@ -24,7 +24,7 @@ mixin room-block(options)
                         img(src=require("./common.blocks/hotel-room-block/star_empty.png")).rating-star
                 span.room__reviews 
                 - var reviewLastDigit = options.review % 10
-                    if (options.review > 10 && options.review < 20)
+                    if ((options.review % 100) > 10 && (options.review % 100) < 20)
                         b= options.review + " "
                         | Отзывов
                     else

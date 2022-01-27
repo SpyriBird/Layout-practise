@@ -1,0 +1,21 @@
+.i-q-dropdown-control-container
+    input(type="text" required placeholder="Сколько гостей" value='').input-text.js-room-facilities-control-element
+    div(hidden).i-q-dropdown-dropdown-container.js-room-facilities-dropdown-container
+        .room-facilities-bedrooms.i-q-dropdown-field
+            div.room-facilities__bedrooms.text_style_small-bold спальни
+            div
+                button(type="button").js-room-facilities__bedrooms-decrease-button.i-q-dropdown-button.i-q-dropdown-button__inactive -
+                .js-room-facilities__bedrooms-current-number.i-q-dropdown-current-number.text_style_small-bold 0
+                button(type="button").js-room-facilities__bedrooms-increase-button.i-q-dropdown-button.i-q-dropdown-button__active +
+        .room-facilities-beds.i-q-dropdown-field
+            span.room-facilities__beds.text_style_small-bold кровати
+            div
+                button(type="button").js-room-facilities__beds-decrease-button.i-q-dropdown-button.i-q-dropdown-button__inactive -
+                .js-room-facilities__beds-current-number.i-q-dropdown-current-number.text_style_small-bold 0
+                button(type="button").js-room-facilities__beds-increase-button.i-q-dropdown-button.i-q-dropdown-button__active +
+        .room-facilities-bathrooms.i-q-dropdown-field
+            span.room-facilities__bathrooms.text_style_small-bold ванные комнаты
+            div
+                button(type="button").js-room-facilities__bathrooms-decrease-button.i-q-dropdown-button.i-q-dropdown-button__inactive -
+                .js-room-facilities__bathrooms-current-number.i-q-dropdown-current-number.text_style_small-bold 0
+                button(type="button").js-room-facilities__bathrooms-increase-button.i-q-dropdown-button.i-q-dropdown-button__active +
