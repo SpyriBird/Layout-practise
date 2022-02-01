@@ -46,24 +46,28 @@ module.exports = {
             jQuery: 'jquery',
         }),
         new HTMLWebpackPlugin({
+            inject: 'body',
             filename: 'index.html',
             minify: false,
             template: 'index.pug',
             chunks: ['index']
         }),
         new HTMLWebpackPlugin({
+            inject: 'body',
             filename: 'sign-in.html',
             minify: false,
             template: 'sign-in.pug',
             chunks: ['sign-in']
         }),
         new HTMLWebpackPlugin({
+            inject: 'body',
             filename: 'search-result.html',
             minify: false,
             template: 'search-result.pug',
             chunks: ['search-result']
         }),
         new HTMLWebpackPlugin({
+            inject: 'body',
             filename: 'registration.html',
             minify: false,
             template: 'registration.pug',
