@@ -5,14 +5,14 @@ import { slideshow } from './common.blocks/landing-page-main/landing-page-main'
 import { UnitedQuantityIQDropdown } from './common.blocks/guest-number-control-element/guest-number-control-element'
 import { SeparateQuantitiesIQDropdown } from './common.blocks/room-facilities-control-element/room-facilities-control-element'
 import { createAccordion } from './common.blocks/aside/aside'
+import { carousel } from './common.blocks/carousel/carousel'
 
 function goTo(href) {
     window.location.href = href;
     return false;
 };
 
-
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function() {
     $(".sign-in-button").on("click", () => goTo("sign-in.html"));
     $(".register-button").on("click", () => goTo("registration.html"));
 
@@ -39,5 +39,7 @@ $(document).ready(function() {
         beds: ['спален', 'спальня', 'спальни'],
         bathrooms: ['ванных комнат', 'ванная комната', 'ванные комнаты']
     });
+
+    carousel();
 
 });

@@ -2,11 +2,41 @@
     display: inline-block
     margin: 1% .6%
 
-.room-picture-container
-    height: 150px
-    width: 270px
+.room-pictures-container
+    height: 152px
+    width: 271px
+    position: relative
+    overflow: hidden
+
+.room-pictures__scroll-button
+    position: absolute
+    display: inline-block
+    top: 0
+    height: 152px
+    width: 30px
+    color: $white
+    background-color: transparent
+    font-size: 2rem
+
+.room-pictures__left-scroll-button
+    left: 0
+
+.room-pictures__right-scroll-button
+
+    right: 0
+
+.room-pictures__list
+    list-style: none
+    padding: 0
+    margin: 0
+    transition: margin-left 250ms
+    width: 9999px
+
+.room-pictures__list li
+    display: inline-block
+
     
-.room-picture-container img
+.room-pictures-container img
     border-radius: 4px
 
 .room-detail-container

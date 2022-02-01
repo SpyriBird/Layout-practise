@@ -1,8 +1,19 @@
 mixin room-block(options)
  
     .hotel-room-block 
-        .room-picture-container
-            img(src=require(`./common.blocks/search-result/image.jpg`) alt="room photo")
+        .room-pictures-container.js-carousel
+            button(type="button").room-pictures__left-scroll-button.room-pictures__scroll-button.js-carousel__left-scroll-button &#8249;
+            .carousel-gallery
+                ul.room-pictures__list
+                    li
+                        img(src=require(`./common.blocks/search-result/image.jpg`) alt="room photo")
+                    li
+                        img(src=require(`./common.blocks/search-result/image2.jpg`) alt="room photo")
+                    li
+                        img(src=require(`./common.blocks/search-result/image3.jpg`) alt="room photo")
+                    li
+                        img(src=require(`./common.blocks/search-result/image4.jpg`) alt="room photo")
+            button(type="button").room-pictures__right-scroll-button.room-pictures__scroll-button.js-carousel__right-scroll-button &#8250;
         .room-detail-container
             .room-number-and-price-container
                 span.room__number= "№ " 
