@@ -1,7 +1,7 @@
 mixin i-q-dropdown(option)
     .i-q-dropdown-control-container
         input(type="text" required placeholder="Сколько гостей" class=`js-${option.comp}-control-element`).input-text
-        div(hidden class=`js-${option.comp}-dropdown-container`).i-q-dropdown-dropdown-container.js-guest-number-dropdown-container
+        div(hidden class=`js-${option.comp}-dropdown-container`).i-q-dropdown-dropdown-container
             each val, index in option.options
                 .i-q-dropdown-field
                     div.guest-number__adults.text_style_small-bold= option.optionNames[index]

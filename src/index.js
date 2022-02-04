@@ -1,6 +1,5 @@
 import { datepicker } from './common.blocks/datepicker/datepicker'
 import { priceSlider } from './common.blocks/price-slider/price-slider'
-import { parseRegisterForm } from './common.blocks/register-popup/registration-form'
 import { slideshow } from './common.blocks/landing-page-main/landing-page-main'
 import { UnitedQuantityIQDropdown } from './common.blocks/guest-number-control-element/guest-number-control-element'
 import { SeparateQuantitiesIQDropdown } from './common.blocks/room-facilities-control-element/room-facilities-control-element'
@@ -15,9 +14,10 @@ function goTo(href) {
 document.addEventListener("DOMContentLoaded", function() {
     $(".sign-in-button").on("click", () => goTo("sign-in.html"));
     $(".register-button").on("click", () => goTo("registration.html"));
+    $('.js-to-search-result').on('click', () => { goTo("search-result.html"); return false });
 
     priceSlider();
-    parseRegisterForm();
+
     datepicker();
     createAccordion();
 
