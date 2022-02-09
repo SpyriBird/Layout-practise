@@ -28,6 +28,7 @@ export class IQDropdown {
         }
 
         this.dropdown = $(this.component + '-dropdown-container');
+        this.container = $(this.component + '-container');
         this.clearButton = $(this.component + '__clear-button');
         this.applyButton = $(this.component + '__apply-button');
 
@@ -74,6 +75,7 @@ export class IQDropdown {
         }
 
         this.input.on('click', () => this.dropdown.removeAttr('hidden'));
+        this.container.on('mouseleave', () => this.dropdown.attr('hidden', 'hidden'))
 
         this.applyButton.on('click', () => this.dropdown.attr('hidden', 'hidden'));
         this.clearButton.on('click', () => this.clearQuantities());
